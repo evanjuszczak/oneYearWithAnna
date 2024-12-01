@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Year with Bas girl</title>
+    <style>
+        p:nth-of-type(1) {
+            color: #ffcccc; /* Light red */
+        }
+
+        p:nth-of-type(2) {
+            color: #ff9999; /* Medium light red */
+        }
+
+        p:nth-of-type(3) {
+            color: #ff6666; /* Medium red */
+        }
+
+        p:nth-of-type(4) {
+            color: #ff3333; /* Strong red */
+        }
+
+        p:nth-of-type(5) {
+            color: #ff0000; /* Bright red */
+        }
+
+        p:nth-of-type(6) {
+            color: #cc0000; /* Dark red */
+        }
+
+        p:nth-of-type(7) {
+            color: #990000; /* Darker red */
+        }
+
+        #imageDisplay {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy One Year Anna Bear </h1>
+      
+    <p> I love you so much bas girl, thank you for the best one year and firsts a man could ask for!! I love you endlessly. </p>
+    <p> I love your pretty brown hair</p>
+    <p> I love your big eyes</p>
+    <p> I love your nice lips</p>
+    <p> I love your sexy body</p>
+    <p> I love your beautiful smile</p>
+    <p> I love your amazing style</p>
+    
+    <h2> Thank you for being the sweetest and kindest of souls to me this past year, I can't wait for more!!!</h2>
+
+    <h5>
+        MEMORY MACHINE BELOW
+    </h5>
+
+    <label for="monthSelect">Select a month(Memory):</label>
+    <select id="monthSelect">
+        <option value="Select"> </option>
+        <option value="december">December</option>
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="june2">June#2</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+    </select>
+    <button onclick="showImage()">Then Press ME</button>
+
+    <div id="imageDisplay"></div>
+
+    <script>
+        function showImage() {
+            const monthSelect = document.getElementById('monthSelect');
+            const selectedMonth = monthSelect.value;
+            const imageDisplay = document.getElementById('imageDisplay');
+
+            // Clear previous image
+            imageDisplay.innerHTML = '';
+
+            // Create an image element
+            const img = document.createElement('img');
+            img.style.width = '300px'; // Set image width
+
+            // Set the image source based on the selected month
+            switch (selectedMonth) {
+                case 'december':
+                    img.src = 'dec.png'; // Replace with your image path
+                    break;
+                case 'january':
+                    img.src = 'jan.png'; // Replace with your image path
+                    break;
+                case 'february':
+                    img.src = 'feb..png'; // Replace with your image path
+                    break;
+                case 'march':
+                    img.src = 'mar.png'; // Replace with your image path
+                    break;
+                case 'april':
+                    img.src = 'apr.png'; // Replace with your image path
+                    break;
+                case 'may':
+                    img.src = 'may.png'; // Replace with your image path
+                    break;
+                case 'june':
+                    img.src = 'june.png'; // Replace with your image path
+                    break;
+                case 'june2':
+                    img.src = 'june2.png'; // Replace with your image path
+                    break;
+                case 'july':
+                    img.src = 'july.png'; // Replace with your image path
+                    break;
+                case 'august':
+                    img.src = 'august.png'; // Replace with your image path
+                    break;
+                case 'september':
+                    img.src = 'sept.png'; // Replace with your image path
+                    break;
+                case 'october':
+                    img.src = 'oct.png'; // Replace with your image path
+                    break;
+                case 'november':
+                    img.src = 'nov.png'; // Replace with your image path
+                    break;
+                default:
+                    img.alt = 'Please select a month';
+                    break;
+            }
+
+            // Append the image to the display div
+            if (img.src) {
+                imageDisplay.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>
